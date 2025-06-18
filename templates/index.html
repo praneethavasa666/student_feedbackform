@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4 text-center">Welcome to Student Feedback Portal</h2>
+<div class="col-md-6 mx-auto">
+    <div class="card shadow-lg">
+        <img src="{{ url_for('static', filename='img/college.jpeg') }}" class="card-img-top" alt="College">
+
+        <div class="card-body">
+            <h5 class="card-title">Sri Vasavi Engineering College</h5>
+            <p class="card-text">
+                SVEC is a well-rounded and accredited private engineering college offering a variety of UG/PG programs, robust placement support, and a lively campus environment. It’s well-suited for students targeting strong academic credentials with holistic development and a reasonable fee structure.
+            </p>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">Computer Science and Engineering</li>
+                <li class="list-group-item">Electronics and Communication Engineering</li>
+                <li class="list-group-item">Electrical and Electronics Engineering</li>
+                <li class="list-group-item">Mechanical Engineering</li>
+                <li class="list-group-item">Civil Engineering</li>
+            </ul>
+            <a href="/feedback" class="btn btn-primary me-2">Submit Feedback</a>
+            <a href="/admin" class="btn btn-secondary">Admin Panel</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>
